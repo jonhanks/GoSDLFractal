@@ -10,6 +10,7 @@ The performance scales with the number of cores in the machine.  However if you 
 Basic controls:
 
 Arrow keys to move around
-+/- Zoom In/Out
-[/] - Change the number of iterations
-o - overlay the image with colors showing what part of the previous image was reused
+
+  * +/- Zoom In/Out
+  * [/] - Change the number of iterations
+  * o - overlay the image with colors showing what part of the previous image was reused
