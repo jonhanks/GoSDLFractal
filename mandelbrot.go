@@ -4,26 +4,26 @@ import (
 	"fmt"
 	"github.com/jonhanks/Go-SDL/sdl"
 	"math/cmplx"
+	"sync"
 	"time"
 	"unsafe"
-	"sync"
 )
 
 // A sample point in the fractal space
 type FractalSample struct {
-	Value     complex128		// currently computed value
-	Escape    int 				// number of iterations prior to escape
-	Reuse     bool 				// should this sample be reused
-	Recompute bool				// should this sample be recomputed
+	Value     complex128 // currently computed value
+	Escape    int        // number of iterations prior to escape
+	Reuse     bool       // should this sample be reused
+	Recompute bool       // should this sample be recomputed
 }
 
 // Global state of a fractal rendering
 type FractalState struct {
-	Width, Height int 			// Dimensions to render the image as
-	MaxIterations int 			// Number of iterations
-	Scale         float64 		// Zoom
-	Center        complex128	// Center point of the view
-	DebugOverlay  bool			// debugging flags
+	Width, Height int        // Dimensions to render the image as
+	MaxIterations int        // Number of iterations
+	Scale         float64    // Zoom
+	Center        complex128 // Center point of the view
+	DebugOverlay  bool       // debugging flags
 	DebugCompute  bool
 	DebugRender   bool
 	DebugMerge    bool
